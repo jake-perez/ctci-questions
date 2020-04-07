@@ -3,7 +3,7 @@
  * How would you solve this problem if a temporary buffer is not allowed?
  */
 
-import LinkedList from '../../data_structures/LinkedList';
+import LinkedList from '../../../data_structures/LinkedList';
 
 const removeDupesWithBuffer = (list: LinkedList<any>): LinkedList<any> => {
   const seen: Set<any> = new Set<any>();

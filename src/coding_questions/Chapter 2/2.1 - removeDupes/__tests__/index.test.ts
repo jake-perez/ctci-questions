@@ -1,4 +1,4 @@
-import LinkedList from '../../../data_structures/LinkedList';
+import LinkedList from '../../../../data_structures/LinkedList';
 import { removeDupesWithBuffer } from '..';
 
 describe('Remove Duplicates', () => {

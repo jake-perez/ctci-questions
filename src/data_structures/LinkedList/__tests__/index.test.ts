@@ -54,8 +54,14 @@ describe('Linked List', () => {
     stringLL.prepend('hello');
     stringLL.append('world');
 
-    expect(numberLL.print()).toEqual('4->5->null');
-    expect(stringLL.print()).toEqual('hello->world->null');
+    expect(numberLL.print()).toEqual('4 -> 5 -> null');
+    expect(stringLL.print()).toEqual('hello -> world -> null');
     expect(blank.print()).toEqual('null');
+  });
+
+  it('should initialize an linked list with arguments', () => {
+    const numberLL = new LinkedList([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+    expect(numberLL.print()).toEqual('1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> null');
   });
 });

@@ -4,8 +4,13 @@ export default class LinkedList<T> {
   private headNode: null | Node<T> = null;
   private tailNode: null | Node<T> = null;
 
-  constructor() {
+  constructor(args: T[] = []) {
     // Initialize a new Linked List
+    if (args.length) {
+      for (const arg of args) {
+        this.append(arg);
+      }
+    }
   }
 
   set head(node: null | Node<T>) {
@@ -50,7 +55,7 @@ export default class LinkedList<T> {
     let outputString: string = '';
     let ptr: null | Node<T> = this.headNode;
     while (ptr) {
-      outputString += `${ptr.value}->`;
+      outputString += `${ptr.value} -> `;
       ptr = ptr.next;
     }
     outputString += 'null';

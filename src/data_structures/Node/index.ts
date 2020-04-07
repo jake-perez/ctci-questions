@@ -1,24 +1,24 @@
 export default class Node<T> {
-  _value: T;
-  _next: null | Node<T>;
+  public nodeValue: T;
+  public nextNode: null | Node<T> = null;
 
   constructor(value: T) {
-    this._value = value;
+    this.nodeValue = value;
   }
 
   set value(newValue: T) {
-    this._value = newValue;
+    this.nodeValue = newValue;
   }
 
   get value(): T {
-    return this._value;
+    return this.nodeValue;
   }
 
   set next(nextValue: null | Node<T>) {
-    this._next = nextValue;
+    this.nextNode = nextValue;
   }
 
   get next(): null | Node<T> {
-    return this._next;
+    return this.nextNode;
   }
 }

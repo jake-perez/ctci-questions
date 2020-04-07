@@ -14,7 +14,7 @@
   "linterOptions": {
     "exclude": [
       "node_modules",
-      "**/*/__tests__/"
+      "**/*.test.ts"
     ]
   }
 }

@@ -24,7 +24,7 @@ export default class LinkedList<T> {
     return this.tailNode;
   }
 
-  public add = (value: T) => {
+  public append = (value: T) => {
     if (this.headNode === null) {
       this.headNode = new Node(value);
       this.tailNode = this.headNode;

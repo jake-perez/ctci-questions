@@ -18,10 +18,10 @@ describe('Linked List', () => {
     const numberLL = new LinkedList();
     const stringLL = new LinkedList();
 
-    numberLL.add(5);
-    numberLL.add(4);
-    stringLL.add('hello');
-    stringLL.add('world');
+    numberLL.append(5);
+    numberLL.append(4);
+    stringLL.append('hello');
+    stringLL.append('world');
 
     expect(numberLL.head!.value).toEqual(5);
     expect(numberLL.tail!.value).toEqual(4);

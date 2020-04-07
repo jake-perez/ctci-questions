@@ -34,4 +34,26 @@ export default class LinkedList<T> {
       this.tailNode = oldTail.next;
     }
   };
+
+  public prepend = (value: T) => {
+    if (this.headNode === null) {
+      this.headNode = new Node(value);
+      this.tailNode = this.headNode;
+    } else {
+      const newHead = new Node(value);
+      newHead.next = this.headNode;
+      this.headNode = newHead;
+    }
+  };
+
+  public print = (): string => {
+    let outputString: string = '';
+    let ptr: null | Node<T> = this.headNode;
+    while (ptr) {
+      outputString += `${ptr.value}->`;
+      ptr = ptr.next;
+    }
+    outputString += 'null';
+    return outputString;
+  };
 }

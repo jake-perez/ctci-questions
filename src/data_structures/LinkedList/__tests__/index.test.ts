@@ -64,4 +64,12 @@ describe('Linked List', () => {
 
     expect(numberLL.print()).toEqual('1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> null');
   });
+
+  it('find function', () => {
+    const numberLL = new LinkedList([1, 2, 3, 4]);
+    const stringLL = new LinkedList(['a', 'b', 'c']);
+
+    expect(numberLL.find(4)).not.toBeNull;
+    expect(stringLL.find('d')).toBeNull;
+  });
 });

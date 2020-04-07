@@ -27,7 +27,9 @@
   "scripts": {
     "test": "npx jest",
     "test:watch": "npx jest --watch",
-    "test:ci": "npx jest --collect-coverage"
+    "test:ci": "npx jest --collect-coverage",
+    "lint": "npx tslint -p tsconfig.json",
+    "lint:fix": "npx tslint -p tsconfig.json --fix"
   },
   "repository": {
     "type": "git",

@@ -51,6 +51,17 @@ export default class LinkedList<T> {
     }
   };
 
+  public find = (value: T): null | Node<T> => {
+    let ptr = this.head;
+    while (ptr) {
+      if (ptr.value === value) {
+        return ptr;
+      }
+      ptr = ptr.next;
+    }
+    return null;
+  };
+
   public print = (): string => {
     let outputString: string = '';
     let ptr: null | Node<T> = this.headNode;

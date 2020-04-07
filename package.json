@@ -25,7 +25,9 @@
     "typescript": "^3.7.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest",
+    "test:watch": "npx jest --watch",
+    "test:ci": "npx jest --collect-coverage"
   },
   "repository": {
     "type": "git",

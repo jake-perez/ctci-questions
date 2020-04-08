@@ -16,21 +16,25 @@
 import { LinkedList, Node } from '../../../data_structures';
 
 const partition = (value: number, list: LinkedList<any>): void => {
-  let ptr = list.head;
+  let ptr: null | Node<any> = list.head;
   if (!ptr) {
     return;
   }
-  let startingPoint = null;
-  if (ptr.value === value) {
-    startingPoint = ptr;
-  } else {
-    while (ptr && ptr.value <= value) {
+  let startingPoint: null | Node<any> = null;
+  let found: boolean = false;
+  while (!found && ptr) {
+    if (ptr.value >= value) {
       startingPoint = ptr;
-      ptr = ptr.next;
+      found = true;
     }
+    ptr = ptr.next;
   }
 
-  let newPtr = startingPoint!.next;
+  if (!startingPoint) {
+    return;
+  }
+
+  let newPtr = startingPoint.next;
   while (newPtr) {
     if (newPtr.value < value) {
       const temp = startingPoint!.value;

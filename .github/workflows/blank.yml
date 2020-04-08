@@ -26,8 +26,10 @@ jobs:
         run: |
           npm install
           npm run test:ci
-    # Runs a single command using the runners shell
 
+      - name: 'Verify Lint'
+        run: npm run lint
+    # Runs a single command using the runners shell
 #     - name: Verify TS-Lint
 #       run: echo Hello, world!
 
